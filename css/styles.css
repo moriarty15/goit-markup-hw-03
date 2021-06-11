@@ -16,6 +16,15 @@
   margin-left: auto;
   margin-right: auto;
 }
+.container .list,
+.container .teammate,
+.container .filter-item {
+  margin: 0;
+  padding: 0;
+}
+.container .list .item img {
+  display: block;
+}
 /* стилизация логотипа */
 .logo {
   font-family: Raleway, sans-serif;
@@ -32,6 +41,24 @@
   margin: 0;
   padding: 0;
 }
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+.side-nav {
+  display: flex;
+}
+.side-nav .item + .item {
+  margin-left: 50px;
+}
+.auth-nav.list {
+  display: flex;
+  margin-left: auto;
+}
+.auth-nav .item + .item {
+  margin-left: 50px;
+}
+
 .side-nav a,
 h2,
 h3,
@@ -49,14 +76,23 @@ h6 {
 .page-header li {
   list-style: none;
 }
+
 /* стилизация шрифта навигации по шрифту */
+
 .side-nav a,
 .auth-nav a {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   letter-spacing: 0.02em;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   text-decoration: none;
+}
+.side-nav.list {
+  margin-left: 93px;
 }
 /* стилизация навигации: наведение, фокус */
 .logo span,
@@ -102,7 +138,7 @@ body {
 }
 
 /* стилизация заголовка h1 */
-h1 {
+.hero-section h1 {
   margin-top: 0;
   margin-bottom: 30px;
 
@@ -119,8 +155,8 @@ h1 {
   display: inline-block;
   background-color: var(--accent-color);
   color: var(--second-text-color);
+  border: 0px;
   cursor: pointer;
-  border: 1px solid transparent;
   border-radius: 4px;
   padding: 10px 32px;
   min-width: 200px;
@@ -128,11 +164,22 @@ h1 {
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.87;
+  line-height: 1.875;
   letter-spacing: 0.06em;
   text-align: center;
 }
 /* стилизация преимуществ */
+.container .edge {
+  display: flex;
+  flex-wrap: wrap;
+}
+.edge .item {
+  width: 270px;
+  background-color: rgb(232, 243, 243);
+}
+.edge .item + .item {
+  margin-left: 30px;
+}
 .edge h3 {
   font-weight: 700;
   font-size: 14px;
@@ -144,13 +191,19 @@ h1 {
   list-style: none;
 }
 .edge {
-  margin: 0;
+  margin: 79px 0;
   padding: 0;
 }
 .edge > li > p {
   margin: 0;
 }
 /* стилизация деятельности */
+.job .list {
+  display: flex;
+}
+.job .list .item + .item {
+  margin-left: 30px;
+}
 .job li {
   list-style: none;
 }
@@ -161,18 +214,32 @@ h1 {
   text-align: center;
   margin-bottom: 50px;
 }
+.job .list {
+  margin: 79px 0;
+}
+
 /* стилизация команды */
 /* стилизация фона */
 .team {
   background-color: var(--team-back-color);
+}
+.team .second-font {
+  margin-top: 79px;
+}
+.container .teammate {
+  display: flex;
+}
+.container .teammate .item + .item {
+  margin-left: 30px;
 }
 .team li {
   list-style: none;
 }
 
 /* стилизация имён участников команды */
-.teammate {
+.container .teammate {
   margin: 0;
+  margin-bottom: 79px;
 }
 .teammate img {
   margin-bottom: 30px;
@@ -228,7 +295,20 @@ h1 {
 }
 
 /* стилизация Портфолио */
+.portfolio-page h1 {
+  margin: 0;
+  color: var(--second-text-color);
+}
 
+.container .filter {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding-left: 0;
+}
+.container .filter .item + .item {
+  margin-left: 8px;
+}
 .portfolio-page p {
   font-size: 16px;
   line-height: 1.87;
@@ -237,22 +317,61 @@ h1 {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin: 0;
 }
 .portfolio-page li {
   list-style: none;
+}
+/* стилизация Фильтра */
+.container .filter-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filter-item a {
+  display: inline;
+}
+.filter-item li {
+  display: inline;
+  width: 370px;
+  padding: 0;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.filter-item li:nth-child(3n) {
+  margin-right: 0;
+}
+.filter-item li:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
 .filter-item a {
   color: var(--primary-text-color);
   text-decoration: none;
 }
+.filter-item a img {
+  display: block;
+  margin-bottom: 20px;
+}
+.filter-item a h2 {
+  margin-bottom: 4px;
+}
+.filter-item li a p {
+  display: inline-block;
+  margin: 0;
+}
 .filter-button {
+  display: inline-block;
+  border-radius: 4px;
+  min-width: 73px;
+  border: 0;
+  padding: 6px 22px;
+
   cursor: pointer;
   font-family: Roboto, sans-serif;
 
   background-color: var(--team-back-color);
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 1.625;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
