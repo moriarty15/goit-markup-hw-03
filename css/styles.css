@@ -8,14 +8,14 @@
   --contacts-color: rgba(255, 255, 255, 0.6);
   --team-back-color: #f5f4fa;
 }
-/* стилизация header и заголовков */
+/* стилизация header и заголовков(outline: 2px solid teal - это рамка;) */
 .container {
   width: 1200px;
   padding: 15px;
-  outline: 2px solid teal;
   margin-left: auto;
   margin-right: auto;
 }
+/* цвет рамки в хедере #ECECEC */
 .container .list,
 .container .teammate,
 .container .filter-item {
@@ -40,6 +40,9 @@
 .list {
   margin: 0;
   padding: 0;
+}
+.container.main-nav {
+  border-bottom: 1px solid #ececec;
 }
 .main-nav {
   display: flex;
@@ -130,7 +133,7 @@ body {
 /* стилизация фона hero и footer */
 .hero-section {
   background-color: var(--second-back-color);
-  outline: 1px solid violet;
+  /* outline: 1px solid violet; */
   text-align: center;
 }
 .hero-section.footer {
@@ -173,9 +176,11 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+.container.half {
+  padding-top: 79px;
+}
 .edge .item {
   width: 270px;
-  background-color: rgb(232, 243, 243);
 }
 .edge .item + .item {
   margin-left: 30px;
@@ -191,8 +196,8 @@ body {
   list-style: none;
 }
 .edge {
-  margin: 79px 0;
   padding: 0;
+  margin: 0;
 }
 .edge > li > p {
   margin: 0;
@@ -214,8 +219,8 @@ body {
   text-align: center;
   margin-bottom: 50px;
 }
-.job .list {
-  margin: 79px 0;
+.container.job {
+  padding-top: 79px;
 }
 
 /* стилизация команды */
@@ -223,8 +228,9 @@ body {
 .team {
   background-color: var(--team-back-color);
 }
-.team .second-font {
-  margin-top: 79px;
+.container.teama {
+  padding-top: 79px;
+  padding-bottom: 79px;
 }
 .container .teammate {
   display: flex;
@@ -239,7 +245,11 @@ body {
 /* стилизация имён участников команды */
 .container .teammate {
   margin: 0;
-  margin-bottom: 79px;
+}
+.container .teammate li {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .teammate img {
   margin-bottom: 30px;
@@ -257,6 +267,7 @@ body {
   line-height: 1.19;
   text-align: center;
   margin: 0;
+  margin-bottom: 30px;
 }
 
 /* стилизация footer */
@@ -337,6 +348,12 @@ body {
   margin-right: 30px;
   margin-bottom: 30px;
 }
+.filter-border {
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  padding-left: 24px;
+}
 .filter-item li:nth-child(3n) {
   margin-right: 0;
 }
@@ -349,9 +366,9 @@ body {
 }
 .filter-item a img {
   display: block;
-  margin-bottom: 20px;
 }
 .filter-item a h2 {
+  padding-top: 20px;
   margin-bottom: 4px;
 }
 .filter-item li a p {
@@ -381,4 +398,8 @@ body {
 .filter-button:active {
   background-color: var(--accent-color);
   color: var(--second-text-color);
+}
+/* рамка для фильтра  */
+.border-filter {
+  border-right: 1px solid #eeeeee;
 }
