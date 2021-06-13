@@ -11,7 +11,8 @@
 /* стилизация header и заголовков(outline: 2px solid teal - это рамка;) */
 .container {
   width: 1200px;
-  padding: 15px;
+  padding: 0 15px;
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -40,9 +41,6 @@
 .list {
   margin: 0;
   padding: 0;
-}
-.container.main-nav {
-  border-bottom: 1px solid #ececec;
 }
 .main-nav {
   display: flex;
@@ -78,6 +76,9 @@ h6 {
 
 .page-header li {
   list-style: none;
+}
+.page-header {
+  border-bottom: 1px solid #ececec;
 }
 
 /* стилизация шрифта навигации по шрифту */
@@ -128,22 +129,27 @@ body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.714;
 }
 /* стилизация фона hero и footer */
 .hero-section {
   background-color: var(--second-back-color);
   /* outline: 1px solid violet; */
   text-align: center;
+  padding: 200px 0;
 }
 .hero-section.footer {
   text-align: left;
+  padding: 60px 0;
 }
 
 /* стилизация заголовка h1 */
 .hero-section h1 {
   margin-top: 0;
   margin-bottom: 30px;
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
 
   color: var(--second-text-color);
 
@@ -176,8 +182,11 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-.container.half {
-  padding-top: 79px;
+.half {
+  padding-top: 94px;
+}
+.half h2 {
+  display: none;
 }
 .edge .item {
   width: 270px;
@@ -219,18 +228,17 @@ body {
   text-align: center;
   margin-bottom: 50px;
 }
-.container.job {
-  padding-top: 79px;
+.job {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* стилизация команды */
 /* стилизация фона */
 .team {
   background-color: var(--team-back-color);
-}
-.container.teama {
-  padding-top: 79px;
-  padding-bottom: 79px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .container .teammate {
   display: flex;
@@ -250,9 +258,8 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-.teammate img {
-  margin-bottom: 30px;
+  width: 270px;
+  background-color: #fff;
 }
 .teammate h3 {
   font-weight: 500;
@@ -261,15 +268,16 @@ body {
   text-align: center;
   margin-bottom: 10px;
 }
+.teammate .range {
+  padding: 30px 0;
+}
 /* стилизация должностей участников команды */
 .teammate p {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   margin: 0;
-  margin-bottom: 30px;
 }
-
 /* стилизация footer */
 .address,
 .contacts {
@@ -307,10 +315,14 @@ body {
 
 /* стилизация Портфолио */
 .portfolio-page h1 {
+  display: none;
   margin: 0;
   color: var(--second-text-color);
 }
-
+.container.butt {
+  padding-top: 94px;
+  padding-bottom: 34px;
+}
 .container .filter {
   display: flex;
   justify-content: center;
@@ -334,6 +346,9 @@ body {
   list-style: none;
 }
 /* стилизация Фильтра */
+.container.group {
+  padding-bottom: 94px;
+}
 .container .filter-item {
   display: flex;
   flex-wrap: wrap;
@@ -367,8 +382,10 @@ body {
 .filter-item a img {
   display: block;
 }
+.itemi {
+  padding: 20px 0;
+}
 .filter-item a h2 {
-  padding-top: 20px;
   margin-bottom: 4px;
 }
 .filter-item li a p {
