@@ -23,9 +23,6 @@
   margin: 0;
   padding: 0;
 }
-.container .list .item img {
-  display: block;
-}
 /* стилизация логотипа */
 .logo {
   font-family: Raleway, sans-serif;
@@ -185,9 +182,6 @@ body {
 .half {
   padding-top: 94px;
 }
-.half h2 {
-  display: none;
-}
 .edge .item {
   width: 270px;
 }
@@ -314,20 +308,30 @@ body {
 }
 
 /* стилизация Портфолио */
-.portfolio-page h1 {
-  display: none;
-  margin: 0;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
   color: var(--second-text-color);
 }
 .container.butt {
   padding-top: 94px;
-  padding-bottom: 34px;
+  padding-bottom: 94px;
 }
 .container .filter {
   display: flex;
   justify-content: center;
-  margin: 0;
   padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 .container .filter .item + .item {
   margin-left: 8px;
@@ -346,9 +350,6 @@ body {
   list-style: none;
 }
 /* стилизация Фильтра */
-.container.group {
-  padding-bottom: 94px;
-}
 .container .filter-item {
   display: flex;
   flex-wrap: wrap;
@@ -357,7 +358,6 @@ body {
   display: inline;
 }
 .filter-item li {
-  display: inline;
   width: 370px;
   padding: 0;
   margin-right: 30px;
@@ -367,7 +367,7 @@ body {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
-  padding-left: 24px;
+  padding: 20px 24px;
 }
 .filter-item li:nth-child(3n) {
   margin-right: 0;
@@ -378,12 +378,6 @@ body {
 .filter-item a {
   color: var(--primary-text-color);
   text-decoration: none;
-}
-.filter-item a img {
-  display: block;
-}
-.itemi {
-  padding: 20px 0;
 }
 .filter-item a h2 {
   margin-bottom: 4px;
@@ -419,4 +413,7 @@ body {
 /* рамка для фильтра  */
 .border-filter {
   border-right: 1px solid #eeeeee;
+}
+img {
+  display: block;
 }
