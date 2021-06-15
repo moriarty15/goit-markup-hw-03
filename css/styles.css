@@ -322,7 +322,7 @@ body {
   overflow: hidden;
   color: var(--second-text-color);
 }
-.container.butt {
+.profile {
   padding-top: 94px;
   padding-bottom: 94px;
 }
